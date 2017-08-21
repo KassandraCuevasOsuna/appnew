@@ -1,0 +1,99 @@
+<h1>precio</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Precio</th>
+      <th>Modelo</th>
+      <th>Memoriain</th>
+      <th>Memoriaex</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @precioguardado.each do |celulare| %>
+      <tr>
+        <td><%= celulare.precio %></td>
+        <td><%= celulare.modelo %></td>
+        <td><%= celulare.memoriain %></td>
+        <td><%= celulare.memoriaex %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% precioMayor = @precioguardado.last%>
+<% precioMenor = @precioguardado.first %>
+<h3> El celular de mayor precio es <%=precioMayor.modelo %> </h3>
+
+<% precioMayor = @precioguardado.last%>
+<% precioMenor = @precioguardado.first %>
+<h3> El celular de menor precio es <%=precioMenor.modelo %> </h3>
+
+
+
+<br>
+
+
+<h1>memoriain</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Precio</th>
+      <th>Modelo</th>
+      <th>Memoriain</th>
+      <th>Memoriaex</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @memoriainguardado.each do |celulare| %>
+      <tr>
+        <td><%= celulare.precio %></td>
+        <td><%= celulare.modelo %></td>
+        <td><%= celulare.memoriain %></td>
+        <td><%= celulare.memoriaex %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<% memoriainMenor = @memoriainguardado.last %>
+<% memoriainMayor = @memoriainguardado.first %>
+<h3> El celular con menor memoria interna es <%=memoriainMenor.modelo %> </h3> 
+<h1>memoriaex</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Precio</th>
+      <th>Modelo</th>
+      <th>Memoriain</th>
+      <th>Memoriaex</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @memoriaexguardado.each do |celulare| %>
+      <tr>
+        <td><%= celulare.precio %></td>
+        <td><%= celulare.modelo %></td>
+        <td><%= celulare.memoriain %></td>>
+        <td><%= celulare.memoriaex %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% memoriaexMayor = @memoriainguardado.last %>
+<% memoriaexMenor = @memoriainguardado.first %>
+<h3> El celular con mayor memoria exerna es <%=memoriaexMayor.modelo %> </h3> 
+
+<br>
+<%= link_to 'Back', celulares_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  precio: 1
+  modelo: MyString
+  memoriain: MyString
+  memoriaex: MyString
+
+two:
+  precio: 1
+  modelo: MyString
+  memoriain: MyString
+  memoriaex: MyString

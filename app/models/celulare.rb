@@ -1,0 +1,2 @@
+class Celulare < ApplicationRecord
+end

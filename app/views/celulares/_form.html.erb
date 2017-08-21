@@ -1,0 +1,37 @@
+<%= form_with(model: celulare, local: true) do |form| %>
+  <% if celulare.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(celulare.errors.count, "error") %> prohibited this celulare from being saved:</h2>
+
+      <ul>
+      <% celulare.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :precio %>
+    <%= form.number_field :precio, id: :celulare_precio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :modelo %>
+    <%= form.text_field :modelo, id: :celulare_modelo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :memoriain %>
+    <%= form.text_field :memoriain, id: :celulare_memoriain %>
+  </div>
+
+  <div class="field">
+    <%= form.label :memoriaex %>
+    <%= form.text_field :memoriaex, id: :celulare_memoriaex %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
